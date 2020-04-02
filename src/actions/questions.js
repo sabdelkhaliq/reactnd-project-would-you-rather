@@ -32,14 +32,14 @@ function addAnswer({ authedUser, qid, answer }) {
     }
 }
 
-export function doAPIAddQuestion(firstOption, secondOption) {
+export function doAPIAddQuestion(optionOneText, optionTwoText) {
     return (dispatch, getState) => {
         //anti pattern but acceptable
         const { authedUser } = getState()
 
         return API._saveQuestion({
-            firstOption,
-            secondOption,
+            optionOneText,
+            optionTwoText,
             author: authedUser
             })
             .then((question) => {

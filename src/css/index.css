@@ -20,3 +20,7 @@ code {
 .question-container {
   max-width: 20rem;
 }
+
+ul {
+  list-style-type: none;
+}

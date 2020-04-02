@@ -39,7 +39,7 @@ class Login extends Component {
                     )
                     }</select>
                 <button placeholder="Login user" disabled={this.state.value==="-1"}
-                    onClick={(event) => this.loginUser(event)} >Login!
+                    onClick={(event) => this.loginUser(event)} >Login
                     </button>
             </div>
         )

@@ -5,8 +5,10 @@ import { handleInitialData } from '../actions/shared'
 import NewQuestion from './NewQuestion'
 import Home from './Home'
 import Login from './Login'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
-import AuthHeader from './AuthHeader';
+import LeaderBoard from './LeaderBoard'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import NotFound404 from './NotFound404';
+import QuestionAction from './QuestionAction';
 
 class App extends Component {
   componentDidMount() {
@@ -17,15 +19,23 @@ class App extends Component {
     return (
       <Router>
         <Fragment>
-          <div className='container'>
+          <div>
             {this.props.loading === true
-              ? <Login />
+              ? <div>
+                <Switch>
+                  <Route path='/' exact component={Login} />
+                  <Route component={NotFound404} />
+                </Switch>
+              </div>
               :
               <div>
                 <Nav />
-                <AuthHeader />
-                <Route path='/' exact component={Home} />
-                <Route path='/add' component={NewQuestion} />
+                <div className="container">
+                  <Route path='/' exact component={Home} />
+                  <Route path='/add' exact component={NewQuestion} />
+                  <Route path='/questions/:qid' component={QuestionAction} />
+                  <Route path='/leaderboard' exact component={LeaderBoard} />
+                </div>
               </div>}
           </div>
         </Fragment>

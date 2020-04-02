@@ -4,7 +4,7 @@
 
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import AnsweredQuestion from "./AnsweredQuestion";
+import Question from "./Question";
 
 class Home extends Component {
 
@@ -19,13 +19,13 @@ class Home extends Component {
     }
 
     render() {
-        let { answeredQuestions, unAnsweredQuestions, authedUser, users } = this.props
+        let { answeredQuestions, unAnsweredQuestions, users } = this.props
 
         console.log(answeredQuestions);
         console.log(unAnsweredQuestions);
 
 
-        answeredQuestions.forEach(q=> console.log(users[q.author]));
+        answeredQuestions.forEach(q => console.log(users[q.author]));
 
         return (
             <div>
@@ -44,14 +44,15 @@ class Home extends Component {
                 <div id="myTabContent" className="tab-content">
                     <div id="unanswered" className={"tab-pane fade " + (this.state.unanswered ? 'active show' : '')}>
                         <div>
-
-
+                            <ul>
+                                {unAnsweredQuestions.map((q) => <li key={q.id}><Question user={users[q.author]} question={q} answered={false} /></li>)}
+                            </ul>
                         </div>
                     </div>
                     <div id="answered" className={"tab-pane fade " + (!this.state.unanswered ? 'active show' : '')} >
                         <div>
                             <ul>
-                                {answeredQuestions.map((q) => <li key={q.id}><AnsweredQuestion user={users[q.author]} question={q} /></li>)}
+                                {answeredQuestions.map((q) => <li key={q.id}><Question user={users[q.author]} question={q} answered={true} /></li>)}
                             </ul>
                         </div>
                     </div>
@@ -65,16 +66,17 @@ class Home extends Component {
 
 function mapStateToProps({ questions, authedUser, users }) {
 
-    const answeredQuestions = Object.values(questions).filter((question) =>
+    const questionsArr = Object.values(questions).sort((q1, q2) => q2.timestamp - q1.timestamp);
+    const answeredQuestions = questionsArr.filter((question) =>
         question.optionOne.votes.some((a) => a === authedUser) ||
         question.optionTwo.votes.some((a) => a === authedUser)
-    )
+    );
 
 
-    const unAnsweredQuestions = Object.values(questions).filter((question) =>
+    const unAnsweredQuestions = questionsArr.filter((question) =>
         !question.optionOne.votes.some((a) => a === authedUser) &&
         !question.optionTwo.votes.some((a) => a === authedUser)
-    )
+    );
 
     return {
         answeredQuestions,

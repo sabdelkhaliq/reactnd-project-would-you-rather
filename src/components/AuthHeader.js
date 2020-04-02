@@ -1,22 +1,20 @@
 import React, { Component } from 'react';
 import { removeAuthedUser } from "../actions/authedUser";
 import { connect } from "react-redux";
-
+import { Link } from 'react-router-dom';
 class AuthHeader extends Component {
 
 
     logoutUser = () => {
         this.props.dispatch(removeAuthedUser());
     }
-
     render() {
         let { user } = this.props;
         return (
-            <div>
+<div class="form-inline my-2 my-lg-0">
                 <p>Welcome, {user.name}</p>
-                <button placeholder="Logout user"
-                    onClick={(event) => this.logoutUser(event)} >Logout!
-            </button>
+                <Link className="btn btn-secondary my-2 my-sm-0" to="/" onClick={(event) => this.logoutUser(event)}> Logout!</Link>
+
             </div>
         )
     }

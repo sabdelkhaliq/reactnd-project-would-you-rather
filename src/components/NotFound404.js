@@ -1,6 +1,14 @@
-class NotFound404 extends Component {
+import React from 'react'
+import { NavLink } from 'react-router-dom'
 
+export default NotFound404 => {
+    return (
+        <div>
+            Page not found please login...
+            <NavLink to='/' exact activeClassName='active' className="nav-link">
+                Login
+                </NavLink>
+        </div>
+    )
 
 }
-
-export default NotFound404
