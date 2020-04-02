@@ -38,16 +38,23 @@ class NewQuestion extends Component {
                     <div className="card-header"><span>Ask New Question</span></div>
                     <div className="card-body">
                         <h4 className="card-title">Would You Rather...</h4>
-                        <input value={firstOption} placeholder="First option" onChange={(event) => this.updateFirstOption(event.target.value)}></input>
-
-                        <input value={secondOption} placeholder="Second option" onChange={(event) => this.updateSecondOption(event.target.value)} />
-
-                        <button placeholder="Publish Question" disabled={!firstOption || !secondOption}
+                        <div className="form-group">
+                        <label className="col-form-label col-form-label-sm" for="inputSmall">First Option</label>
+                        <input className="form-control form-control-sm" value={firstOption} placeholder="First option" onChange={(event) => this.updateFirstOption(event.target.value)}></input>
+                        <label className="col-form-label col-form-label-sm" for="inputSmall">Second Option</label>
+                        <input className="form-control form-control-sm" value={secondOption} placeholder="Second option" onChange={(event) => this.updateSecondOption(event.target.value)} />
+                        </div>
+                        <hr className="my-4"/>
+                        <div>
+                        <button className="btn btn-warning btn-lg" placeholder="Publish Question" disabled={!firstOption || !secondOption}
                             onClick={(event) => this.publishQuestion(event)} >Publish
                     </button>
                     </div>
+                    </div>
+
                 </div>
             </div>
+            
 
         )
 

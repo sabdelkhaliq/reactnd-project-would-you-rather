@@ -4,20 +4,20 @@ import AuthHeader from './AuthHeader';
 
 export default Nav => {
     return (
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-            <div class="collapse navbar-collapse" id="navbarColor01">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div className="collapse navbar-collapse" id="navbarColor01">
+                <ul className="navbar-nav mr-auto">
+                    <li className="nav-item">
                         <NavLink to='/' exact activeClassName='active' className="nav-link">
                             Home
                           </NavLink>
                     </li>
-                    <li class="nav-item">
+                    <li className="nav-item">
                         <NavLink to='/add' activeClassName='active' className="nav-link">
                             New Question
                           </NavLink>
                     </li>
-                    <li class="nav-item">
+                    <li className="nav-item">
                         <NavLink to='/leaderboard' activeClassName='active' className="nav-link">
                             LeaderBoard
                           </NavLink>

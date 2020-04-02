@@ -6,7 +6,6 @@ class LeaderBoard extends Component {
     render() {
         const { users } = this.props;
         const usersArr = Object.values(users).sort((u1, u2) => (u2.questions.length + Object.keys(u2.answers).length) - (u1.questions.length + Object.keys(u1.answers).length));
-        console.log(usersArr)
         return (
             <div>
                 <ul>

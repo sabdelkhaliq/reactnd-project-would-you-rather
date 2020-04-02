@@ -20,13 +20,6 @@ class Home extends Component {
 
     render() {
         let { answeredQuestions, unAnsweredQuestions, users } = this.props
-
-        console.log(answeredQuestions);
-        console.log(unAnsweredQuestions);
-
-
-        answeredQuestions.forEach(q => console.log(users[q.author]));
-
         return (
             <div>
                 <ul className="nav nav-tabs">
@@ -41,6 +34,7 @@ class Home extends Component {
                         </button>
                     </li>
                 </ul>
+                <hr className="my-4"/>
                 <div id="myTabContent" className="tab-content">
                     <div id="unanswered" className={"tab-pane fade " + (this.state.unanswered ? 'active show' : '')}>
                         <div>

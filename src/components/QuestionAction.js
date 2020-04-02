@@ -56,7 +56,7 @@ class QuestionAction extends Component {
                 {answered === false ?
 
                     <div className="card border-primary mb-3 question-container">
-                        <div className="card-header"><img alt="Example" className="question-avatar" src={user.avatarURL} /><span>{`${user.name} asks...`}</span></div>
+                        <div className="card-header"><img alt="user-avatar" className="question-avatar" src={user.avatarURL} /><span>{`${user.name} asks...`}</span></div>
                         <div className="card-body">
                             <h4 className="card-title">Would You Rather...</h4>
                             <input type="radio" id="optionOne" name="options" value="optionOne" onChange={this.selectOptionOne} selected></input>
@@ -68,7 +68,7 @@ class QuestionAction extends Component {
                     </div>
                     :
                     <div>
-                        <div className="card-header"><img alt="Example" className="question-avatar" src={user.avatarURL} /><span>{`${user.name} asks...`}</span></div>
+                        <div className="card-header"><img alt="user-avatar" className="question-avatar" src={user.avatarURL} /><span>{`${user.name} asks...`}</span></div>
                         <div className="card-body">
                             <h4 className="card-title">Would You Rather...</h4>
                             <p>{`${question.optionOne.text}`}{firstOption && <span style={{ backgroundColor: 'red' }}> - You voted for that option</span>}</p>

@@ -11,10 +11,9 @@ class AuthHeader extends Component {
     render() {
         let { user } = this.props;
         return (
-<div class="form-inline my-2 my-lg-0">
-                <p>Welcome, {user.name}</p>
+            <div className="form-inline my-2 my-lg-0">
+                <span class="text-secondary">{`${user.name}     `}</span>
                 <Link className="btn btn-secondary my-2 my-sm-0" to="/" onClick={(event) => this.logoutUser(event)}> Logout!</Link>
-
             </div>
         )
     }
@@ -22,7 +21,6 @@ class AuthHeader extends Component {
 
 function mapStateToProps({ users, authedUser }) {
     return {
-
         user: users[authedUser]
     }
 }

@@ -19,7 +19,7 @@ class App extends Component {
     return (
       <Router>
         <Fragment>
-          <div>
+          <div className="halfParent center">
             {this.props.loading === true
               ? <div>
                 <Switch>
@@ -30,11 +30,13 @@ class App extends Component {
               :
               <div>
                 <Nav />
-                <div className="container">
+                <div>
+                <div className="jumbotron" id="homeJumbotron">
                   <Route path='/' exact component={Home} />
                   <Route path='/add' exact component={NewQuestion} />
                   <Route path='/questions/:qid' component={QuestionAction} />
                   <Route path='/leaderboard' exact component={LeaderBoard} />
+                </div>
                 </div>
               </div>}
           </div>

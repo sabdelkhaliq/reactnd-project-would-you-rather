@@ -18,9 +18,30 @@ code {
 }
 
 .question-container {
-  max-width: 20rem;
+  max-width: 35rem;
 }
 
 ul {
   list-style-type: none;
+}
+
+.spacer {
+  margin-top: 20px;
+}
+
+.center {
+    margin: 0 auto;
+}
+
+.halfParent {
+  width: 50%;
+}
+
+#homeJumbotron
+{
+ padding : 0;
+}
+
+.no-padding{
+  padding : 0;
 }
