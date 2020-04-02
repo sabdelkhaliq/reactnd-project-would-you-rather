@@ -14,7 +14,6 @@ Would You Rather is a simple game that that poses a dilemma in the form of a que
 - hit enter
 - Download [Node](http://nodejs.org/).
 - Using terminal navigate to the project folder you cloned and type 
-    - $ npm update
     - $ npm install
     - $ npm start
 - Open a web browser and go to http://localhost:3001/
