@@ -39,9 +39,9 @@ class NewQuestion extends Component {
                     <div className="card-body">
                         <h4 className="card-title">Would You Rather...</h4>
                         <div className="form-group">
-                        <label className="col-form-label col-form-label-sm" for="inputSmall">First Option</label>
+                        <label className="col-form-label col-form-label-sm" htmlFor="inputSmall">First Option</label>
                         <input className="form-control form-control-sm" value={firstOption} placeholder="First option" onChange={(event) => this.updateFirstOption(event.target.value)}></input>
-                        <label className="col-form-label col-form-label-sm" for="inputSmall">Second Option</label>
+                        <label className="col-form-label col-form-label-sm" htmlFor="inputSmall">Second Option</label>
                         <input className="form-control form-control-sm" value={secondOption} placeholder="Second option" onChange={(event) => this.updateSecondOption(event.target.value)} />
                         </div>
                         <hr className="my-4"/>

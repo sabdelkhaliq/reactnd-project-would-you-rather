@@ -8,7 +8,7 @@ export default function User({ user, rank }) {
                 <div className="card-body">
                     <p>{`The number of questions the user asked: ${user.questions.length}`}</p>
                     <p>{`The number of questions the user answered: ${Object.keys(user.answers).length}`}</p>
-                    <h5 class="text-warning">{`Score:  ${(Object.keys(user.answers).length)+(user.questions.length)}`}</h5>
+                    <h5 className="text-warning">{`Score:  ${(Object.keys(user.answers).length)+(user.questions.length)}`}</h5>
                 </div>
             </div>
         </div >

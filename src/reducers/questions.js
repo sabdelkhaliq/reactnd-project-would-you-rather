@@ -5,9 +5,10 @@ export default function questions(state = {}, action) {
         case GET_ALL_QUESTIONS:
             return { ...state, ...action.questions }
         case ADD_QUESTION:
+            const { type, ...question } = action
             return {
                 ...state,
-                [action.id]: action
+                [action.id]: question
             }
         case ANSWER_QUESTION:
             return {
