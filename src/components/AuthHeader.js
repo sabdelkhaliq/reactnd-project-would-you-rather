@@ -12,7 +12,7 @@ class AuthHeader extends Component {
         let { user } = this.props;
         return (
             <div className="form-inline my-2 my-lg-0">
-                <span className="text-secondary">{`${user.name}     `}</span>
+                <h5 className="text-secondary usernameMarginRight" >{`Welcome ${user.name}`}</h5>
                 <Link className="btn btn-secondary my-2 my-sm-0" to="/" onClick={(event) => this.logoutUser(event)}> Logout!</Link>
             </div>
         )

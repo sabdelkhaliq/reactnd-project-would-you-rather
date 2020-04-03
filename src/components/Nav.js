@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import AuthHeader from './AuthHeader';
 
-export default Nav => {
+export default function Nav () {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
             <div className="collapse navbar-collapse" id="navbarColor01">

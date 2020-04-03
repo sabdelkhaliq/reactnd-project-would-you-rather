@@ -45,3 +45,7 @@ ul {
 .no-padding{
   padding : 0;
 }
+
+.usernameMarginRight {
+  margin-right: 10px;
+}
