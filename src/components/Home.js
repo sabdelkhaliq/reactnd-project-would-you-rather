@@ -24,12 +24,12 @@ class Home extends Component {
             <div>
                 <ul className="nav nav-tabs">
                     <li className="nav-item">
-                        <button onClick={(event) => this.setUnAnswered(true)} >
+                        <button onClick={(event) => this.setUnAnswered(true)} className={(this.state.unanswered ? 'tabClicked' : 'tabUnClicked')}>
                             UnAnswered
                         </button>
                     </li>
                     <li className="nav-item">
-                        <button onClick={(event) => this.setUnAnswered(false)} >
+                        <button onClick={(event) => this.setUnAnswered(false)} className={(this.state.unanswered ? 'tabUnClicked' : 'tabClicked')}>
                             Answered
                         </button>
                     </li>

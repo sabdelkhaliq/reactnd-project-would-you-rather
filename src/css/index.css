@@ -49,3 +49,10 @@ ul {
 .usernameMarginRight {
   margin-right: 10px;
 }
+
+.tabUnClicked{
+  background-color:grey;    
+}
+.tabClicked{
+  background-color:yellow;    
+}
