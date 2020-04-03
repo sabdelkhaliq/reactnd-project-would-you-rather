@@ -34,6 +34,8 @@ class NewQuestion extends Component {
         return (
 
             <div>
+                <hr className="my-4"></hr>
+                <ul>
                 <div className="card border-primary mb-3 question-container">
                     <div className="card-header"><span>Ask New Question</span></div>
                     <div className="card-body">
@@ -53,6 +55,7 @@ class NewQuestion extends Component {
                     </div>
 
                 </div>
+                </ul>
             </div>
             
 

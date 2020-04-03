@@ -7,6 +7,7 @@ class LeaderBoard extends Component {
         const usersArr = Object.values(users).sort((u1, u2) => (u2.questions.length + Object.keys(u2.answers).length) - (u1.questions.length + Object.keys(u1.answers).length));
         return (
             <div>
+                <hr className="my-4"></hr>
                 <ul>
                     {usersArr.map((user, index) => <li key={user.id}><User user={user} rank={(index + 1)} /></li>)}
                     <li></li>
