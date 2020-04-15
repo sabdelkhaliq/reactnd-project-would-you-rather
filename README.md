@@ -2,7 +2,7 @@
 
 ## Description
 
-Would You Rather is a simple game that that poses a dilemma in the form of a question beginning with "would you rather". The app allows  a user to share one or more would you rather questions with his friends and check the voting results of them.
+Would You Rather is a simple game that poses a dilemma in the form of a question beginning with "would you rather". The app allows  a user to share one or more would you rather questions with his friends and check the voting results of them.
 
 ## Installation
 
